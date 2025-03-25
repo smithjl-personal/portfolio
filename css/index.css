@@ -1,0 +1,32 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+/*
+    Code for light mode... might work on this later.
+    @media screen and (prefers-color-scheme: light) {
+        body {
+            background-color: white;
+            color: black;
+        }
+    }
+*/
+
+/* Basic fade-in animation. */
+.fade-in {
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+.fade-in.visible {
+	opacity: 1;
+}
+
+#initial-section {
+	font-size: 3em;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
