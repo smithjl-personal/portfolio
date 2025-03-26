@@ -4,6 +4,8 @@
  *      You can find the deployemnt at: https://smithjl-personal.github.io/portfolio.github.io/
  */
 
+import { getRandomInt, getRandomChar, setCharAt } from "./modules/general.js";
+
 /**
  * This is the main function, it is called after page load.
  */
@@ -56,41 +58,6 @@ function initJumblers() {
 			}, charChangeDuration);
 		}
 	}
-}
-
-/**
- * Returns a random integer between min (inclusive) and max (inclusive).
- * @param {number} min
- * @param {number} max
- * @returns {number}
- */
-function getRandomInt(min, max) {
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-/**
- * Returns a random character from the below options.
- * @returns {string} A single character.
- */
-function getRandomChar() {
-	const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-	const index = Math.floor(Math.random() * chars.length);
-	return chars.charAt(index);
-}
-
-/**
- * Strings are immutable in JavaScript. This function is a workaround that allows replacement of a character
- * at a given position in a string.
- * @param {string} str The input string.
- * @param {number} index The index of the string we are 'mutating'.
- * @param {string} chr Single character that we are replacing in the string.
- * @returns {string} The new modified string.
- */
-function setCharAt(str, index, chr) {
-	if (index > str.length - 1) return str;
-	return str.substring(0, index) + chr + str.substring(index + 1);
 }
 
 main();
