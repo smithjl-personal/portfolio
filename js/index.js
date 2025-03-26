@@ -12,6 +12,7 @@ import { getRandomInt, getRandomChar, setCharAt } from "./modules/general.js";
 function main() {
 	initFadeIn();
 	initJumblers();
+	initSmoothScrollers();
 }
 
 /**
@@ -43,8 +44,8 @@ function initJumblers() {
 			el.innerHTML = setCharAt(el.innerHTML, i, getRandomChar());
 
 			// Set some variables that determine the jumble rate and duration.
-			const charChangeRate = getRandomInt(250, 500);
-			const charChangeDuration = getRandomInt(150, 1750);
+			const charChangeRate = getRandomInt(150, 500);
+			const charChangeDuration = getRandomInt(150, 2000);
 
 			// Jumble! Store a reference to the interval so we can stop it.
 			const jumbleInterval = setInterval(() => {
@@ -57,6 +58,22 @@ function initJumblers() {
 				el.innerHTML = setCharAt(el.innerHTML, i, finalChar);
 			}, charChangeDuration);
 		}
+	}
+}
+
+/**
+ * Initialize elements that have the smooth-scroll class. To make them... well... scroll smoothly.
+ */
+function initSmoothScrollers() {
+	const elements = document.querySelectorAll("a.smooth-scroll");
+	for (const el of elements) {
+		el.addEventListener("click", function (e) {
+			e.preventDefault();
+
+			document.querySelector(this.getAttribute("href")).scrollIntoView({
+				behavior: "smooth",
+			});
+		});
 	}
 }
 

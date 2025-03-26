@@ -3,16 +3,6 @@ body {
 	color: white;
 }
 
-/*
-    Code for light mode... might work on this later.
-    @media screen and (prefers-color-scheme: light) {
-        body {
-            background-color: white;
-            color: black;
-        }
-    }
-*/
-
 /* Basic fade-in animation. */
 .fade-in {
 	opacity: 0;
@@ -22,6 +12,7 @@ body {
 	opacity: 1;
 }
 
+/* TODO: Verify if we should be using 'vh' here? */
 #initial-section {
 	font-size: 3em;
 	height: 100vh;
@@ -29,4 +20,27 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+#about {
+	font-size: 3em;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#portrait {
+	max-width: 500px;
+	height: auto;
+	border-radius: 45%;
+}
+
+/* TODO: Make these button styles look better. */
+.btn {
+	text-decoration: none;
+	color: white;
+	background-color: gray;
+	border-radius: 10px;
+	padding: 10px;
 }
