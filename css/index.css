@@ -12,6 +12,30 @@ body {
 	opacity: 1;
 }
 
+.more-btn {
+	position: relative;
+	animation-name: button-slide-up;
+	animation-duration: 4s;
+}
+@keyframes button-slide-up {
+	0% {
+		top: 500px;
+		opacity: 0;
+	}
+	80% {
+		top: 500px;
+		opacity: 0;
+	}
+	90% {
+		top: -50px;
+		opacity: 1;
+	}
+	100% {
+		top: 0px;
+		opacity: 1;
+	}
+}
+
 /* TODO: Verify if we should be using 'vh' here? */
 #initial-section {
 	font-size: 3em;
