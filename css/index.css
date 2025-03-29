@@ -43,6 +43,58 @@ nav.nav-header ul li a.active {
 	opacity: 1;
 }
 
+/* Styling for sections. */
+section {
+	font-size: var(--font-size);
+	display: flex;
+}
+section#home {
+	/* TODO: Verify if we should be using 'vh' here? */
+	height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section#about {
+	/* TODO: Verify if we should be using 'vh' here? */
+	height: 100vh;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+section#about img#portrait {
+	max-width: 500px;
+	height: auto;
+	border-radius: 45%;
+}
+section#projects {
+	flex-direction: column;
+}
+
+/* Button styles. */
+.btn {
+	/* Remove any link styling. */
+	text-decoration: none;
+
+	padding: 10px;
+
+	color: var(--text-color-secondary);
+
+	/* Should this be some variable? */
+	background-color: rgb(18, 18, 18);
+
+	/* Border. */
+	border-style: outset;
+	border-width: 4px;
+	border-radius: 10px;
+	border-color: var(--text-color-secondary);
+}
+.btn:hover {
+	color: var(--text-color-primary);
+	border-color: var(--text-color-primary);
+}
+
+/* Animation for first button on the page. */
 .more-btn {
 	position: relative;
 	animation-name: button-slide-up;
@@ -65,51 +117,4 @@ nav.nav-header ul li a.active {
 		top: 0px;
 		opacity: 1;
 	}
-}
-
-section {
-	font-size: var(--font-size);
-	display: flex;
-}
-
-/* TODO: Verify if we should be using 'vh' here? */
-#initial-section {
-	height: 100vh;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-#about {
-	height: 100vh;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-#portrait {
-	max-width: 500px;
-	height: auto;
-	border-radius: 45%;
-}
-
-.btn {
-	/* Remove any link styling. */
-	text-decoration: none;
-
-	padding: 10px;
-
-	color: var(--text-color-secondary);
-
-	/* Should this be some variable? */
-	background-color: rgb(18, 18, 18);
-
-	/* Border. */
-	border-style: outset;
-	border-width: 4px;
-	border-radius: 10px;
-	border-color: var(--text-color-secondary);
-}
-
-.btn:hover {
-	color: var(--text-color-primary);
-	border-color: var(--text-color-primary);
 }
