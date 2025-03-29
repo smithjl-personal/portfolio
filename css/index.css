@@ -29,7 +29,7 @@ nav.nav-header ul li a {
 	text-decoration: none;
 }
 nav.nav-header ul li a:hover,
-nav.nav-header ul li.active {
+nav.nav-header ul li a.active {
 	color: var(--text-color-primary);
 	text-decoration: underline;
 }

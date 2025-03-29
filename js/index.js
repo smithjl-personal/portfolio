@@ -13,6 +13,7 @@ function main() {
 	initFadeIn();
 	initJumblers();
 	initSmoothScrollers();
+	initNavbarLinkHighlighting();
 }
 
 /**
@@ -75,6 +76,63 @@ function initSmoothScrollers() {
 			});
 		});
 	}
+}
+
+/**
+ * Initializes scroll event listener to update the highlighted main navbar links.
+ */
+function initNavbarLinkHighlighting() {
+	const navbar = document.getElementById("main-nav");
+	if (navbar === null) {
+		throw Error(
+			"Could not find the navbar on the document. Did you remove/rename it? Looking for ID `main-nav`."
+		);
+	}
+
+	const navbarHeight = navbar.offsetHeight + 1;
+	const links = navbar.querySelectorAll("a");
+	const sections = document.querySelectorAll("section");
+
+	if (!links.length) {
+		throw Error("No links found on the main navbar. Looking for all `a` tags.");
+	}
+	if (!sections.length) {
+		throw Error(
+			"No sections found that correspond to navbar links. Looking for all `section` tags."
+		);
+	}
+
+	// Track the closest section outside of the event listener.
+	let closestSectionID = null;
+	window.addEventListener("scroll", function () {
+		// Get container scroll position
+		const scrollDistanceFromTop = window.pageYOffset + navbarHeight + 40;
+
+		// Get the closest section. Assume it is the first.
+		let closestSection = sections[0];
+		let closestSectionDistance = Math.abs(closestSection.offsetTop - scrollDistanceFromTop);
+		for (const section of sections) {
+			const sectionDistance = Math.abs(section.offsetTop - scrollDistanceFromTop);
+			if (sectionDistance < closestSectionDistance) {
+				closestSection = section;
+				closestSectionDistance = sectionDistance;
+			}
+		}
+
+		// If the link is the same, early exit.
+		if (closestSection.id === closestSectionID) {
+			return;
+		}
+
+		// Otherwise, update the link.
+		closestSectionID = closestSection.id;
+		for (const link of links) {
+			link.classList.remove("active");
+			if (link.getAttribute("href") === `#${closestSectionID}`) {
+				link.classList.add("active");
+			}
+		}
+	});
 }
 
 main();
