@@ -1,6 +1,37 @@
+/* Define some global CSS variables. */
+:root {
+	--bg-color: black;
+	--text-color-primary: white;
+	--text-color-secondary: #1d9bf0;
+	--font-size: 3em;
+}
+
 body {
-	background-color: black;
-	color: white;
+	background-color: var(--bg-color);
+	color: var(--text-color-primary);
+}
+
+/* Style the main navbar. */
+nav.nav-header {
+	font-size: var(--font-size);
+	overflow: hidden;
+	position: sticky;
+	top: 0px;
+}
+nav.nav-header ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: end;
+}
+nav.nav-header ul li a {
+	color: var(--text-color-secondary);
+	padding: 14px 16px;
+	text-decoration: none;
+}
+nav.nav-header ul li a:hover,
+nav.nav-header ul li.active {
+	color: var(--text-color-primary);
+	text-decoration: underline;
 }
 
 /* Basic fade-in animation. */
@@ -36,35 +67,49 @@ body {
 	}
 }
 
+section {
+	font-size: var(--font-size);
+	display: flex;
+}
+
 /* TODO: Verify if we should be using 'vh' here? */
 #initial-section {
-	font-size: 3em;
 	height: 100vh;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 #about {
-	font-size: 3em;
 	height: 100vh;
-	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
-
 #portrait {
 	max-width: 500px;
 	height: auto;
 	border-radius: 45%;
 }
 
-/* TODO: Make these button styles look better. */
 .btn {
+	/* Remove any link styling. */
 	text-decoration: none;
-	color: white;
-	background-color: gray;
-	border-radius: 10px;
+
 	padding: 10px;
+
+	color: var(--text-color-secondary);
+
+	/* Should this be some variable? */
+	background-color: rgb(18, 18, 18);
+
+	/* Border. */
+	border-style: outset;
+	border-width: 4px;
+	border-radius: 10px;
+	border-color: var(--text-color-secondary);
+}
+
+.btn:hover {
+	color: var(--text-color-primary);
+	border-color: var(--text-color-primary);
 }
