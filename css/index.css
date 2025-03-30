@@ -11,6 +11,16 @@ body {
 	color: var(--text-color-primary);
 }
 
+a {
+	text-decoration: none;
+	color: var(--text-color-secondary);
+}
+a:hover,
+a.active {
+	color: var(--text-color-primary);
+	text-decoration: underline;
+}
+
 /* Style the main navbar. */
 nav.nav-header {
 	font-size: var(--font-size);
@@ -25,8 +35,6 @@ nav.nav-header ul {
 	margin-top: 30px;
 }
 nav.nav-header ul li a {
-	text-decoration: none;
-	color: var(--text-color-secondary);
 	background-color: var(--bg-color);
 
 	/* Top needs more padding, so we can hide the text behind the navbar. */
@@ -34,11 +42,6 @@ nav.nav-header ul li a {
 	padding-right: 16px;
 	padding-bottom: 5px;
 	padding-left: 16px;
-}
-nav.nav-header ul li a:hover,
-nav.nav-header ul li a.active {
-	color: var(--text-color-primary);
-	text-decoration: underline;
 }
 
 /* Basic fade-in animation. */
