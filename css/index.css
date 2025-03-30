@@ -22,11 +22,18 @@ nav.nav-header ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: end;
+	margin-top: 30px;
 }
 nav.nav-header ul li a {
-	color: var(--text-color-secondary);
-	padding: 14px 16px;
 	text-decoration: none;
+	color: var(--text-color-secondary);
+	background-color: var(--bg-color);
+
+	/* Top needs more padding, so we can hide the text behind the navbar. */
+	padding-top: 40px;
+	padding-right: 16px;
+	padding-bottom: 5px;
+	padding-left: 16px;
 }
 nav.nav-header ul li a:hover,
 nav.nav-header ul li a.active {
