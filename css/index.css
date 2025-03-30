@@ -18,7 +18,6 @@ body {
 	background-color: var(--bg-color);
 	color: var(--text-color-primary);
 }
-
 a {
 	text-decoration: none;
 	color: var(--text-color-secondary);
@@ -27,6 +26,16 @@ a:hover,
 a.active {
 	color: var(--text-color-primary);
 	text-decoration: underline;
+}
+
+/* Small screens. */
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 12px;
+	}
+	p {
+		font-size: 2rem;
+	}
 }
 
 /* Style the main navbar. */
@@ -77,7 +86,7 @@ section#home {
 
 section#about {
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 
 	/* Centering. */
 	justify-content: center;
