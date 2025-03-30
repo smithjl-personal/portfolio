@@ -58,6 +58,7 @@ section {
 	font-size: var(--font-size);
 	display: flex;
 }
+
 section#home {
 	/* TODO: Verify if we should be using 'vh' here? */
 	height: 100vh;
@@ -65,6 +66,7 @@ section#home {
 	justify-content: center;
 	align-items: center;
 }
+
 section#about {
 	/* TODO: Verify if we should be using 'vh' here? */
 	height: 100vh;
@@ -75,8 +77,16 @@ section#about {
 section#about img#portrait {
 	max-width: 500px;
 	height: auto;
+
+	border-style: outset;
+	border-width: 6px;
 	border-radius: 45%;
+	border-color: var(--text-color-secondary);
 }
+section#about div {
+	margin: 0px 50px;
+}
+
 section#projects {
 	flex-direction: column;
 }
@@ -100,6 +110,7 @@ section#projects {
 	border-color: var(--text-color-secondary);
 }
 .btn:hover {
+	text-decoration: none;
 	color: var(--text-color-primary);
 	border-color: var(--text-color-primary);
 }
