@@ -3,7 +3,10 @@
 	--bg-color: black;
 	--text-color-primary: white;
 	--text-color-secondary: #1d9bf0;
-	--font-size: 3em;
+}
+
+html {
+	font-size: 16px;
 }
 
 body {
@@ -23,7 +26,7 @@ a.active {
 
 /* Style the main navbar. */
 nav.nav-header {
-	font-size: var(--font-size);
+	font-size: 3rem;
 	overflow: hidden;
 	position: sticky;
 	top: 0px;
@@ -32,16 +35,16 @@ nav.nav-header ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: end;
-	margin-top: 30px;
+	margin-top: 2rem;
 }
 nav.nav-header ul li a {
 	background-color: var(--bg-color);
 
 	/* Top needs more padding, so we can hide the text behind the navbar. */
-	padding-top: 40px;
-	padding-right: 16px;
-	padding-bottom: 5px;
-	padding-left: 16px;
+	padding-top: 3rem;
+	padding-right: 1rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1rem;
 }
 
 /* Basic fade-in animation. */
@@ -55,7 +58,7 @@ nav.nav-header ul li a {
 
 /* Styling for sections. */
 section {
-	font-size: var(--font-size);
+	font-size: 3rem;
 	display: flex;
 }
 
@@ -84,7 +87,7 @@ section#about img#portrait {
 	border-color: var(--text-color-secondary);
 }
 section#about div {
-	margin: 0px 50px;
+	margin: 0px 3rem;
 }
 
 section#projects {
@@ -96,7 +99,7 @@ section#projects {
 	/* Remove any link styling. */
 	text-decoration: none;
 
-	padding: 10px;
+	padding: 0.5rem;
 
 	color: var(--text-color-secondary);
 
