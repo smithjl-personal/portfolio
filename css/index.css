@@ -8,6 +8,11 @@
 html {
 	font-size: 16px;
 }
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 12px;
+	}
+}
 
 body {
 	background-color: var(--bg-color);
@@ -60,26 +65,26 @@ nav.nav-header ul li a {
 section {
 	font-size: 3rem;
 	display: flex;
+	min-height: 100vh;
 }
 
 section#home {
-	/* TODO: Verify if we should be using 'vh' here? */
-	height: 100vh;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
 section#about {
-	/* TODO: Verify if we should be using 'vh' here? */
-	height: 100vh;
 	flex-direction: row;
+	flex-wrap: wrap;
+
+	/* Centering. */
 	justify-content: center;
 	align-items: center;
 }
 section#about img#portrait {
-	max-width: 500px;
-	height: auto;
+	width: 100%;
 
 	border-style: outset;
 	border-width: 6px;
@@ -87,7 +92,13 @@ section#about img#portrait {
 	border-color: var(--text-color-secondary);
 }
 section#about div {
-	margin: 0px 3rem;
+	margin: 0px 1rem;
+}
+section#about div#about-image-container {
+	width: max(30%, 400px);
+}
+section#about div#about-text-container {
+	width: max(60%, 500px);
 }
 
 section#projects {
