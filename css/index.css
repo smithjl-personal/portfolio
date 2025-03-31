@@ -164,3 +164,9 @@ footer {
 	align-items: center;
 	justify-content: center;
 }
+footer .icon-container a {
+	margin: 0px 0.75rem;
+}
+footer .icon-container a:hover {
+	text-decoration: none;
+}
