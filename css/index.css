@@ -109,6 +109,28 @@ section#projects {
 	flex-direction: column;
 }
 
+div.project-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin: 0 1rem;
+}
+div#project-1 div#project-1-text-container {
+	width: max(70%, 500px);
+}
+div#project-1 div#project-1-image-container {
+	margin-top: 6rem;
+	width: max(30%, 500px);
+}
+div#project-1 img.chess-engine-image {
+	width: 100%;
+
+	border-style: outset;
+	border-width: 3px;
+	border-color: var(--text-color-secondary);
+}
+
 /* Button styles. */
 .btn {
 	/* Remove any link styling. */
@@ -169,4 +191,8 @@ footer .icon-container a {
 }
 footer .icon-container a:hover {
 	text-decoration: none;
+}
+
+.project-button-container {
+	text-align: center;
 }
