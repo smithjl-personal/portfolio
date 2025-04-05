@@ -23,16 +23,6 @@ a.active {
 	text-decoration: underline;
 }
 
-/* Small screens. */
-@media only screen and (max-width: 600px) {
-	html {
-		font-size: 12px;
-	}
-	p {
-		font-size: 2rem;
-	}
-}
-
 /* Style the main navbar. */
 nav.nav-header {
 	font-size: 3rem;
@@ -107,6 +97,9 @@ section#about div#about-text-container {
 
 section#projects {
 	flex-direction: column;
+}
+section .project-button-container {
+	text-align: center;
 }
 
 div.project-container {
@@ -185,6 +178,10 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding-bottom: 1rem;
+}
+footer .icon-container {
+	padding-bottom: 0.5rem;
 }
 footer .icon-container a {
 	margin: 0px 0.75rem;
@@ -193,6 +190,18 @@ footer .icon-container a:hover {
 	text-decoration: none;
 }
 
-.project-button-container {
-	text-align: center;
+/* Small screens. */
+@media only screen and (max-width: 600px) {
+	/* Tweak the font-size. */
+	html {
+		font-size: 12px;
+	}
+	p {
+		font-size: 2rem;
+	}
+
+	/* Tweak navigation position. */
+	nav.nav-header ul {
+		margin-top: 0.5rem;
+	}
 }
