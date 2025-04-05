@@ -207,7 +207,7 @@ footer .icon-container a:hover {
 	nav.nav-header ul {
 		width: 100%;
 		margin: 0px;
-		padding: 0px;
+		padding: 0.5rem 0px;
 		background-color: var(--bg-color);
 
 		flex-direction: column;
