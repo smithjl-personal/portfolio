@@ -14,6 +14,7 @@ function main() {
 	initJumblers();
 	initSmoothScrollers();
 	initNavbarLinkHighlighting();
+	initNavbarToggling();
 }
 
 /**
@@ -133,6 +134,48 @@ function initNavbarLinkHighlighting() {
 			}
 		}
 	});
+}
+
+function initNavbarToggling() {
+	const navbar = document.getElementById("main-nav");
+	if (navbar === null) {
+		throw Error("Tried to toggle navbar when it could not be found on the dom.");
+	}
+
+	// Find the menu icon.
+	const menuIcon = navbar.querySelector("a.menu-toggle");
+	if (menuIcon === null) {
+		throw Error(
+			"Could not find the menu icon on the dom, so could not attach click event listener."
+		);
+	}
+
+	// When the icon is clicked, toggle expand/collapse.
+	menuIcon.addEventListener("click", function () {
+		if (navbar.classList.contains("collapsed")) {
+			navbar.classList.remove("collapsed");
+		} else {
+			navbar.classList.add("collapsed");
+		}
+	});
+
+	// When any other link is clicked, collapse the navbar if it is expanded.
+	const navLinks = navbar.querySelectorAll("a.nav-link");
+	for (const link of navLinks) {
+		console.log("found link: ", link);
+
+		link.addEventListener("click", function () {
+			console.log("you clicked the link");
+
+			// TODO: Fix this timeout issue. If we add the class,
+			// element dissapears while scrolling, messing up scroll destination.
+			if (!navbar.classList.contains("collapsed")) {
+				setTimeout(() => {
+					navbar.classList.add("collapsed");
+				}, 750);
+			}
+		});
+	}
 }
 
 main();
