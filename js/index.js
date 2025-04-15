@@ -1,7 +1,7 @@
 /**
  * @format
  * @description This is the main JS file that runs the portfolio page.
- *      You can find the deployemnt at: https://smithjl-personal.github.io/portfolio.github.io/
+ *      You can find the deployemnt at: https://smithjl-personal.github.io/portfolio/
  */
 
 import { getRandomInt, getRandomChar, setCharAt } from "./modules/general.js";
