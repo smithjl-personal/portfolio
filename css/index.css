@@ -112,11 +112,16 @@ div.project-container {
 
 	margin: 0 1rem;
 }
+
+div.project-container.chess-engine {
+	flex-direction: row-reverse;
+}
 div.project-container.chess-engine div.project-description {
-	width: max(70%, 500px);
+	width: max(65%, 500px);
+	margin: 0 1rem;
 }
 div.project-container.chess-engine div.project-image {
-	margin-top: 6rem;
+	margin: 5rem 1rem 0 1rem;
 	width: max(30%, 500px);
 }
 div.project-container.chess-engine img.chess-engine-image {
@@ -131,7 +136,7 @@ div.project-container.game-of-life .project-description {
 	width: max(60%, 500px);
 }
 div.project-container.game-of-life .project-image {
-	margin-top: 6rem;
+	margin-top: 5rem;
 	width: max(40%, 500px);
 }
 div.project-container.game-of-life img.game-of-life-image {
