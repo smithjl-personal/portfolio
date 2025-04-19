@@ -162,11 +162,7 @@ function initNavbarToggling() {
 	// When any other link is clicked, collapse the navbar if it is expanded.
 	const navLinks = navbar.querySelectorAll("a.nav-link");
 	for (const link of navLinks) {
-		console.log("found link: ", link);
-
 		link.addEventListener("click", function () {
-			console.log("you clicked the link");
-
 			// TODO: Fix this timeout issue. If we add the class,
 			// element dissapears while scrolling, messing up scroll destination.
 			if (!navbar.classList.contains("collapsed")) {
