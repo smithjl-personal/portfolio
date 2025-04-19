@@ -112,14 +112,14 @@ div.project-container {
 
 	margin: 0 1rem;
 }
-div#project-1 div#project-1-text-container {
+div.project-container.chess-engine div.project-description {
 	width: max(70%, 500px);
 }
-div#project-1 div#project-1-image-container {
+div.project-container.chess-engine div.project-image {
 	margin-top: 6rem;
 	width: max(30%, 500px);
 }
-div#project-1 img.chess-engine-image {
+div.project-container.chess-engine img.chess-engine-image {
 	width: 100%;
 
 	border-style: outset;
