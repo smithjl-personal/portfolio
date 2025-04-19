@@ -127,6 +127,17 @@ div#project-1 img.chess-engine-image {
 	border-color: var(--text-color-secondary);
 }
 
+div.project-container.game-of-life .project-description {
+	width: max(60%, 500px);
+}
+div.project-container.game-of-life .project-image {
+	margin-top: 6rem;
+	width: max(40%, 500px);
+}
+div.project-container.game-of-life img.game-of-life-image {
+	width: 100%;
+}
+
 /* Button styles. */
 .btn {
 	/* Remove any link styling. */
