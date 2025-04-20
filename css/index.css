@@ -148,6 +148,7 @@ div.project-container.game-of-life img.game-of-life-image {
 	/* Remove any link styling. */
 	text-decoration: none;
 
+	margin: 0 0.25rem;
 	padding: 0.5rem;
 
 	color: var(--text-color-secondary);
