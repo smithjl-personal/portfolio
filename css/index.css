@@ -2,7 +2,7 @@
 :root {
 	--bg-color: black;
 	--text-color-primary: white;
-	--text-color-secondary: #1d9bf0;
+	--text-color-secondary: #689dff;
 }
 
 html {
@@ -12,6 +12,7 @@ html {
 body {
 	background-color: var(--bg-color);
 	color: var(--text-color-primary);
+	margin: 0 5vw;
 }
 a {
 	text-decoration: none;
@@ -77,8 +78,7 @@ section#about {
 	flex-wrap: wrap-reverse;
 
 	/* Centering. */
-	justify-content: center;
-	align-items: center;
+	justify-content: space-between;
 }
 section#about img#portrait {
 	width: 100%;
@@ -88,11 +88,8 @@ section#about img#portrait {
 	border-radius: 45%;
 	border-color: var(--text-color-secondary);
 }
-section#about div {
-	margin: 0px 1rem;
-}
 section#about div#about-image-container {
-	width: max(30%, 400px);
+	width: max(35%, 400px);
 }
 section#about div#about-text-container {
 	width: max(60%, 500px);
@@ -108,9 +105,7 @@ section .project-button-container {
 div.project-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-
-	margin: 0 1rem;
+	justify-content: space-between;
 }
 
 div.project-container.chess-engine {
@@ -118,7 +113,6 @@ div.project-container.chess-engine {
 }
 div.project-container.chess-engine div.project-description {
 	width: max(65%, 500px);
-	margin: 0 1rem;
 }
 div.project-container.chess-engine div.project-image {
 	margin: 5rem 1rem 0 1rem;
@@ -133,7 +127,7 @@ div.project-container.chess-engine img.chess-engine-image {
 }
 
 div.project-container.game-of-life .project-description {
-	width: max(60%, 500px);
+	width: max(55%, 500px);
 }
 div.project-container.game-of-life .project-image {
 	margin-top: 5rem;
